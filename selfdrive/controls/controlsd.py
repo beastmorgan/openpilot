@@ -93,7 +93,7 @@ class Controls:
     self.params = Params()
     self.dp_no_gps_ctrl = self.params.get_bool("dp_no_gps_ctrl")
     #self.dp_no_fan_ctrl = self.params.get_bool("dp_no_fan_ctrl")
-    self.dp_no_fan_ctrl = False
+    self.dp_no_fan_ctrl = True
     self.dp_0813 = self.params.get_bool("dp_0813")
     self._dp_alka = self.params.get_bool("dp_alka")
     self._dp_alka_active = True
