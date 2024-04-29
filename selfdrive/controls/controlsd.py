@@ -92,8 +92,7 @@ class Controls:
 
     self.params = Params()
     self.dp_no_gps_ctrl = self.params.get_bool("dp_no_gps_ctrl")
-    #self.dp_no_fan_ctrl = self.params.get_bool("dp_no_fan_ctrl")
-    self.dp_no_fan_ctrl = True
+    self.dp_no_fan_ctrl = self.params.get_bool("dp_no_fan_ctrl")
     self.dp_0813 = self.params.get_bool("dp_0813")
     self._dp_alka = self.params.get_bool("dp_alka")
     self._dp_alka_active = True
@@ -334,7 +333,7 @@ class Controls:
       if self.sm['peripheralState'].fanSpeedRpm == 0 and self.sm['deviceState'].fanSpeedPercentDesired > 50:
         # allow enough time for the fan controller in the panda to recover from stalls
         if (self.sm.frame - self.last_functional_fan_frame) * DT_CTRL > 15.0:
-          self.events.add(EventName.fanMalfunction)
+          #self.events.add(EventName.fanMalfunction)
       else:
         self.last_functional_fan_frame = self.sm.frame
 
